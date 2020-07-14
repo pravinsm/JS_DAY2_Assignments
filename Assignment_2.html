@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Assignment 2</title>
+  <style>
+  button{
+  border-radius:12px;
+  border: none;
+  padding:10px;
+  background-color: #555555;
+  color: white;
+  }
+  button:hover{
+  background-color: #008CBA;
+  color: black;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 10px 10px 0 rgba(0,0,0,0.19);
+  }
+  </style>
+  </head>
+  <body>
+    <h1>Print the current page</h1>
+    <p id=daytime></p>
+    <button onclick="window.print()">Print</button>
+    <script>
+      var day_list = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+      var day= new Date().getDay();
+      var day_time=document.getElementById("daytime").innerHTML="Today is : "+day_list[day]+"."+"<br>";
+      
+      var hr = new Date().getHours();
+      var mins = new Date().getMinutes();
+      var secs = new Date().getSeconds();
+      if(hr==12){
+        document.getElementById("daytime").innerHTML=day_time+"Current time is : "+hr+" NOON : "+mins+" : "+secs; 
+      }
+      else if(hr>12){
+	document.getElementById("daytime").innerHTML=day_time+"Current time is : "+hr+" PM : "+mins+" : "+secs;
+      }
+      else{
+	document.getElementById("daytime").innerHTML=day_time+"Current time is : "+hr+" AM : "+mins+" : "+secs;
+      }
+      
+    </script>	
+  </body>
+</html>

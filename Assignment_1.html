@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Assignment 1</title>
+  </head>
+  <body>
+    <h1>Day and Time</h1>
+    <script>
+      var day_list = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+      var day= new Date().getDay();
+      document.write("Today is : "+day_list[day]+"."+"<br>");
+      var hr = new Date().getHours();
+      var mins = new Date().getMinutes();
+      var secs = new Date().getSeconds();
+      if(hr==12){
+        document.write("Current time is : "+hr+" NOON : "+mins+" : "+secs); 
+      }
+      else if(hr>12){
+	document.write("Current time is : "+hr+" PM : "+mins+" : "+secs);
+      }
+      else{
+	document.write("Current time is : "+hr+" AM : "+mins+" : "+secs);
+      }
+      
+    </script>	
+  </body>
+</html>
